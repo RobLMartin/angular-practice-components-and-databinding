@@ -6,11 +6,14 @@
     <label>Server Content</label>
     <input type="text" class="form-control" [(ngModel)]="newServerContent">
     <br>
+    <!-- Click event that emits our custom server events -->
     <button
       class="btn btn-primary"
       (click)="onAddServer()">Add Server</button>
+
+    <!-- Click event that emits our custom server events -->
     <button
       class="btn btn-primary"
       (click)="onAddBlueprint()">Add Server Blueprint</button>
   </div>
-</div>  
+</div>
