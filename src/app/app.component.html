@@ -7,10 +7,13 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change first Element</button>
+      <button class="btn btn-danger" (click)="onDestroy()">Destroy First Component</button>
       <!--Displaying our servers-->
       <app-server-element
       *ngFor="let serverElement of serverElements"
-      [srvElement]="serverElement">
+      [srvElement]="serverElement"
+      [name]="serverElement.name">
       <p>
         <!--Style our servers conditionally-->
         <strong *ngIf="serverElement.type === 'server'" style="color: #88D8C0">{{ serverElement.content }}</strong>
